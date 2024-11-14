@@ -1,0 +1,428 @@
+/* Estilo del cuerpo */
+.body {
+    background-color: rgb(36, 36, 86);
+
+}
+
+@media (min-width: 991.98px) {
+
+    /* Estilos generales de la barra de navegación */
+    .navbar .container-fluid {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        display: flex;
+    justify-content: space-between;
+    }
+
+
+
+    /* Estilo de los elementos del menú */
+    .navbar .dropdown-menu .dropdown-item {
+        color: white;
+        /* Texto blanco para los elementos */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        /* Líneas divisorias blancas con transparencia */
+        transition: background-color 0.3s ease;
+        /* Transición de fondo en hover */
+    }
+
+
+    /* Efecto hover para los elementos del menú */
+    .navbar .dropdown-menu .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        /* Fondo blanco semitransparente en hover */
+
+    }
+
+
+
+    /* Ajustes de formulario de búsqueda para hacerlo invisible */
+    .search-form input[type="search"] {
+        border: inline;
+        /* Quita el borde */
+        background-color: transparent;
+        /* Fondo transparente */
+        outline: none;
+        /* Quita el borde al hacer clic */
+        padding: 8px;
+        margin-right: 5px; /* Espacio entre el campo de texto y el botón */
+    
+
+    }
+    .btn {
+        padding: 10px 15px;
+        height: auto; /* Ajusta automáticamente la altura al contenido */
+        display: flex;
+        align-items: center; /* Alinea verticalmente el texto del botón */
+    }
+    .navbar-nav .nav-link {
+        color: orangered;
+        /* Texto en blanco */
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+        position: relative;
+    }
+
+
+
+    /* Estilos de navegación y de formularios de búsqueda */
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        width: 6%;
+    }
+
+/* Estilo del contenedor del login y del buscador */
+.nav-container {
+    display: flex;
+    gap: 20px; /* Ajusta el espacio entre el buscador y el botón de login */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+    .navbar-nav .nav-link:hover::after {
+        transform: scaleX(1);
+        /* Muestra la línea completa en hover */
+    }
+
+
+
+    .navbar-nav .nav-link.active::after,
+    .navbar-nav .nav-link:focus::after,
+    .navbar-nav .nav-link:active::after {
+        transform: scaleX(1);
+        /* Muestra la línea completa en el enlace activo */
+    }
+
+    /* Estilo del logo de escritorio (centrado y ajustable en tamaño) */
+    .navbar-brand .logo-desktop {
+        display: inline;
+        width: 6%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    /* Oculta el logo móvil en pantallas grandes */
+    .logo-mobile {
+        display: none;
+    }
+
+
+
+    /* Ajustes para el formulario de búsqueda y el botón de login */
+    .search-form .btn .btn-outline-success {
+        display: inline-flex;
+        align-items: center;
+        height: 25px;
+        padding-top: 1rem;
+        color: orangered;
+
+
+    }
+
+    .navbar-nav .nav-link::after {
+        content: "";
+        /* Crear una línea debajo */
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        /* Ajusta este valor para mover la línea hacia abajo */
+        height: 2px;
+        /* Grosor de la línea */
+
+        /* Color de la línea */
+        transform: scaleX(0);
+        /* Escala inicial (sin línea visible) */
+        transition: transform 0.3s ease;
+        /* Animación de transición */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: rgb(255, 255, 255);
+
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        transform: scaleX(1);
+        /* Muestra la línea completa en hover */
+    }
+
+    /* Mantener el color blanco en el enlace activo */
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link:active {
+        color: white !important;
+    }
+}
+
+/* Fondo difuminado y transparente del menú desplegable */
+.navbar .dropdown-menu {
+    background: transparent;
+    /* Fondo blanco con transparencia */
+    backdrop-filter: blur(50px);
+    /* Efecto de desenfoque */
+    border: none;
+    /* Quitar borde del menú */
+}
+
+.navbar-nav .nav-link {
+    color: orange;
+    /* Texto en blanco */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    position: relative;
+    padding: top 2rem;
+}
+
+
+
+
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .logo-nav {
+        width: 35%;
+    }
+
+    /* Oculta el logo de escritorio y muestra el logo móvil */
+    .navbar-brand .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline;
+        width: 50px;
+    }
+
+    .navbar-toggler {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        transition: .5s ease-in-out;
+        margin-left: 10px;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+
+    .navbar-toggler span {
+        margin: 0;
+        padding: 0;
+    }
+
+    .toggler-icon {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: orangered;
+        border-radius: 1px;
+        opacity: 1;
+        left: 0;
+        
+    }
+
+    .middle-bar {
+        margin-top: 0px;
+    }
+
+   
+
+    .navbar-toggler .middle-bar {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+  
+
+    .navbar-toggler.collapsed .top-bar {
+        margin-top: -20px;
+        transform: rotate(0deg);
+
+    }
+
+    .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+        filter: alpha(opacity=100);
+
+    }
+
+    .navbar-toggler.collapsed .bottom-bar {
+        margin-top: 20px;
+        transform: rotate(0deg);
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: rgb(18, 23, 67);
+
+    }
+
+    /* Fondo transparente y desenfocado para el offcanvas en móviles */
+    .offcanvas {
+        background: rgba(36, 36, 86, 0.8);
+        /* Fondo semitransparente personalizado */
+        backdrop-filter: blur(10px);
+        /* Efecto de desenfoque */
+        padding: 1rem;
+        /* Ajustar el padding del contenido */
+    }
+
+    /* Ajustes del formulario de búsqueda en móviles */
+    .search-form input[type="search"] {
+        width: 80%;
+        height: 30px;
+    }
+
+    .search-form .btn-outline-success {
+        height: 30px;
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.lema {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 350 px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+@media (max-width: 1200px) {
+    .lema h1 {
+        font-size: 10vw;
+        /* Aumenta el tamaño del texto en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .lema h1 {
+        font-size: 12vw;
+        /* Aumenta el tamaño del texto en pantallas tabletas */
+    }
+}
+
+@media (max-width: 576px) {
+    .lema h1 {
+        font-size: 14vw;
+        /* Aumenta el tamaño del texto en pantallas móviles */
+        text-align: center;
+        /* Centrar el texto en dispositivos móviles */
+    }
+
+    .lema {
+        padding-top: 200px;
+        width: 80%;
+    }
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+    padding: 10px 0;
+    width: 200px;
+    background-color: white;
+    font-size: 1.8rem;
+    color: transparent;
+    font-weight: 800;
+    transition: 150ms;
+    margin-top: 0px;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:hover {
+    transform: translate(0, -5px);
+}
+
+#hero {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0;
+    /* Eliminar márgenes para evitar desplazamientos */
+    padding-top: 1rem;
+    overflow: hidden;
+    /* Evita que el contenido desborde */
+}
+
+.lema {
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    width: auto;
+    /* Ajusta según necesites */
+    margin-right: 2rem;
+    margin-left: 60%;
+    position: relative;
+    z-index: 3;
+    color: white;
+}
+
+.lema h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.lema button {
+    margin-top: 10px;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+    padding: 10px 0px;
+    background-color: white;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 800;
+    transition: transform 150ms;
+    cursor: pointer;
+}
+
+
+.lema button:hover {
+    transform: translate(0, -5px);
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Capa de oscurecimiento */
+    z-index: 2;
+}
